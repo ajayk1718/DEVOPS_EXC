@@ -1,3 +1,25 @@
 argocd
 *.log
 argocd
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Terragrunt
+.terragrunt-cache/
+
+# Kubernetes
+kubeconfig
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
