@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: dashboard-app
+
+  template:
+    metadata:
+      labels:
+        app: dashboard-app
+
+    spec:
+      containers:
+      - name: dashboard-app
+        image: nginx
+
+        ports:
+        - containerPort: 80
