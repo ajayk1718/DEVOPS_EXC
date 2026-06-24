@@ -1,0 +1,233 @@
+{
+    "RouteTables": [
+        {
+            "Associations": [
+                {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-0148bf27cb5e2e053",
+                    "RouteTableId": "rtb-0b51c88a3bfe7a7ec",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-0b51c88a3bfe7a7ec",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "192.168.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-00bc6ab18b207b68c",
+            "OwnerId": "181640953339"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-031ed1b191772e11b",
+                    "RouteTableId": "rtb-0e2051797c1288aff",
+                    "SubnetId": "subnet-064a9b84d47353b56",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-0e2051797c1288aff",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "192.168.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "NatGatewayId": "nat-01c79df8b68382119",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "alpha.eksctl.io/eksctl-version",
+                    "Value": "0.224.0"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-oidc-enabled",
+                    "Value": "false"
+                },
+                {
+                    "Key": "aws:cloudformation:logical-id",
+                    "Value": "PrivateRouteTableUSEAST1B"
+                },
+                {
+                    "Key": "eksctl.cluster.k8s.io/v1alpha1/cluster-name",
+                    "Value": "egress-lab"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "eksctl-egress-lab-cluster/PrivateRouteTableUSEAST1B"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-name",
+                    "Value": "egress-lab"
+                },
+                {
+                    "Key": "aws:cloudformation:stack-name",
+                    "Value": "eksctl-egress-lab-cluster"
+                },
+                {
+                    "Key": "aws:cloudformation:stack-id",
+                    "Value": "arn:aws:cloudformation:us-east-1:181640953339:stack/eksctl-egress-lab-cluster/b94580c0-6f76-11f1-a46f-12abeb9ed3ef"
+                }
+            ],
+            "VpcId": "vpc-00bc6ab18b207b68c",
+            "OwnerId": "181640953339"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-04155333c8c7b13e5",
+                    "RouteTableId": "rtb-0e87bf972ab9404bb",
+                    "SubnetId": "subnet-0e600154f695bc314",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                },
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-0f9f679ab0b85cbf5",
+                    "RouteTableId": "rtb-0e87bf972ab9404bb",
+                    "SubnetId": "subnet-074420b89d868ed0e",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-0e87bf972ab9404bb",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "192.168.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-004945f164823b4f9",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "alpha.eksctl.io/eksctl-version",
+                    "Value": "0.224.0"
+                },
+                {
+                    "Key": "aws:cloudformation:logical-id",
+                    "Value": "PublicRouteTable"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "eksctl-egress-lab-cluster/PublicRouteTable"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-oidc-enabled",
+                    "Value": "false"
+                },
+                {
+                    "Key": "aws:cloudformation:stack-name",
+                    "Value": "eksctl-egress-lab-cluster"
+                },
+                {
+                    "Key": "eksctl.cluster.k8s.io/v1alpha1/cluster-name",
+                    "Value": "egress-lab"
+                },
+                {
+                    "Key": "aws:cloudformation:stack-id",
+                    "Value": "arn:aws:cloudformation:us-east-1:181640953339:stack/eksctl-egress-lab-cluster/b94580c0-6f76-11f1-a46f-12abeb9ed3ef"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-name",
+                    "Value": "egress-lab"
+                }
+            ],
+            "VpcId": "vpc-00bc6ab18b207b68c",
+            "OwnerId": "181640953339"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-02642280519615ef9",
+                    "RouteTableId": "rtb-0b21c7f17c3597d49",
+                    "SubnetId": "subnet-011a24d0f17467c20",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "PropagatingVgws": [],
+            "RouteTableId": "rtb-0b21c7f17c3597d49",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "192.168.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "NatGatewayId": "nat-01c79df8b68382119",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "aws:cloudformation:stack-id",
+                    "Value": "arn:aws:cloudformation:us-east-1:181640953339:stack/eksctl-egress-lab-cluster/b94580c0-6f76-11f1-a46f-12abeb9ed3ef"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-oidc-enabled",
+                    "Value": "false"
+                },
+                {
+                    "Key": "aws:cloudformation:stack-name",
+                    "Value": "eksctl-egress-lab-cluster"
+                },
+                {
+                    "Key": "aws:cloudformation:logical-id",
+                    "Value": "PrivateRouteTableUSEAST1F"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "eksctl-egress-lab-cluster/PrivateRouteTableUSEAST1F"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-name",
+                    "Value": "egress-lab"
+                },
+                {
+                    "Key": "alpha.eksctl.io/eksctl-version",
+                    "Value": "0.224.0"
+                },
+                {
+                    "Key": "eksctl.cluster.k8s.io/v1alpha1/cluster-name",
+                    "Value": "egress-lab"
+                }
+            ],
+            "VpcId": "vpc-00bc6ab18b207b68c",
+            "OwnerId": "181640953339"
+        }
+    ]
+}
