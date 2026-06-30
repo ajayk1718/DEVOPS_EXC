@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: payment-service
+
+  template:
+    metadata:
+      labels:
+        app: payment-service
+
+    spec:
+      containers:
+      - name: payment-service
+
+        image: redis:7-alpine
+
+        command:
+        - /bin/sh
+        - /scripts/app.sh
+
+        env:
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-secret
+              key: REDIS_PASSWORD
+
+        volumeMounts:
+        - name: script-volume
+          mountPath: /scripts
+
+      volumes:
+      - name: script-volume
+        configMap:
+          name: payment-app-script
+          defaultMode: 0777
