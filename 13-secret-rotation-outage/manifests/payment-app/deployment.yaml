@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: payment-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: payment-app
+
+  template:
+    metadata:
+      labels:
+        app: payment-app
+
+    spec:
+      containers:
+      - name: payment-app
+
+        image: 181640953339.dkr.ecr.us-east-1.amazonaws.com/payment-app:1.0
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: payment-secret
+              key: API_TOKEN
+
+        - name: CLIENT_TOKEN
+          value: "token-v2"
